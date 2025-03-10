@@ -1,0 +1,22 @@
+{
+  "name": "create-qortal",
+  "version": "1.0.1",
+  "description": "CLI tool to create a Qortal App",
+  "bin": {
+    "create-qapp": "./index.js"
+  },
+  "preferGlobal": true,
+  "type": "module",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "degit": "^2.8.4",
+    "inquirer": "^12.4.3",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["qortal", "qapp", "create-qapp", "cli"],
+  "author": "Qortal",
+  "license": "MIT"
+}
