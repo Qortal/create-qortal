@@ -10,8 +10,8 @@ import inquirer from 'inquirer';
 
 const program = new Command();
 
-const GITHUB_USERNAME = "PhilReact";
-const REPO_NAME = "templates"; // Single repo storing all templates
+const GITHUB_USERNAME = "Qortal";
+const REPO_NAME = "qapp-templates"; // Single repo storing all templates
 
 /**
  * Function to fetch available templates from GitHub repo
