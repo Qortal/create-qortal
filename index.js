@@ -116,11 +116,20 @@ program
       console.log("\n📦 Installing dependencies...");
       execSync(`npm install`, { stdio: 'inherit' });
 
+      // 🔹 Check if "initialize" script exists in package.json
+      if (fs.existsSync(packageJsonPath)) {
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+        if (packageJson.scripts && packageJson.scripts.initialize) {
+          console.log("\n⚙️ Running npm run initialize...");
+          execSync(`npm run initialize`, { stdio: 'inherit' });
+        }
+      }
+
       console.log(`\n🎉 Project "${sanitizedProjectName}" is ready!`);
       console.log(`\nNext steps:\n  cd ${sanitizedProjectName}\n  npm run dev`);
 
-       // Check if VS Code is installed and open the project
-       try {
+      // Check if VS Code is installed and open the project
+      try {
         execSync('code --version', { stdio: 'ignore' }); // Check if 'code' command exists
         console.log("\n💻 Opening project in VS Code...");
         execSync(`code ${projectPath}`, { stdio: 'inherit' });

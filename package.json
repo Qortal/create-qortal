@@ -1,6 +1,6 @@
 {
   "name": "create-qortal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI tool to create a Qortal App",
   "bin": {
     "create-qapp": "./index.js"
